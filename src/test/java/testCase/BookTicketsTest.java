@@ -8,36 +8,11 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 import steps.BookATicketStep;
 import domain.BookTicket;
-import io.github.bonigarcia.wdm.config.DriverManagerType;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utils.BaseTest;
 
 @RunWith(DataProviderRunner.class)
-public class BookTicketsTest {
-
-    static WebDriver driver;
-
-    @BeforeClass
-    public static void beforeClass() {
-        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
-    }
-
-    @Before
-    public void setup() {
-        driver.get("https://marsair.thoughtworks-labs.net/DanielSilva");
-        new WebDriverWait(driver, 15);
-        String title = driver.getTitle();
-        Assert.assertEquals(title, "Mars Airlines: Home");
-
-    }
-
-    @AfterClass
-    public static void tearDown() {
-        driver.quit();
-    }
+public class BookTicketsTest extends BaseTest {
 
     @DataProvider
     public static Object[][] customerDataInfo() {
