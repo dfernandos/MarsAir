@@ -1,6 +1,6 @@
 package steps;
 
-import PageObject.HomePageObject;
+import pageObject.HomePageObject;
 import domain.BookTicket;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -48,6 +48,14 @@ public class BookATicketStep {
 
     public void clickAtBackButton(){
         homePageObject.getBackLinkElement().click();
+    }
+
+    public void clickAtLogoLink(){
+        homePageObject.getLogoLink().click();
+    }
+
+    public void clickAtBookATicketLink(){
+        homePageObject.getBookATicketLink().click();
     }
 
 }
