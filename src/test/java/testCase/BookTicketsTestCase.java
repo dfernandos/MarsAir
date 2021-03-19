@@ -1,17 +1,15 @@
 package testCase;
 
+import PageObject.HomePageObject;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import steps.BookATicketStep;
 import domain.BookTicket;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,6 +29,9 @@ public class BookTicketsTestCase {
     public void setup() {
         driver.get("https://marsair.thoughtworks-labs.net/DanielSilva");
         new WebDriverWait(driver, 15);
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "Mars Airlines: Home");
+
     }
 
     @AfterClass
@@ -58,6 +59,14 @@ public class BookTicketsTestCase {
         bookATicketStep.searchForFlightToMars(bookTicket);
         bookATicketStep.validateMessages(positiveFeedbackMessage, negativeFeedbackMessage);
         bookATicketStep.clickAtBackButton();
+    }
+
+    @Test
+    public void validateFieldsAreDisplayed(){
+        HomePageObject homePageObject = new HomePageObject(driver);
+        homePageObject.getReturningElement().isDisplayed();
+        homePageObject.getDepartingElement().isDisplayed();
+
     }
 
 }
