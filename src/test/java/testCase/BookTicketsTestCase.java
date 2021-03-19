@@ -46,7 +46,7 @@ public class BookTicketsTestCase {
                 {"July", "December (two years from now)", "Sorry, there are no more seats available.", "Seats available!Call now on 0800 MARSAIR to book!" },
                 {"December", "December (next year)", "Sorry, there are no more seats available.", "Seats available!Call now on 0800 MARSAIR to book!"},
                 {"July (next year)", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
-                {"December (two years from now)", "December (two years from now)", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."}
+                {"July", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
             };
         }
 
