@@ -44,9 +44,39 @@ o relatório em HTML será gerado no caminho `target/site`.
     
 ## Cenários de Teste UI
 
+História de usuário: Basic Search flow
 
-   
-  
+Cenário 1: Mostrar campos de filtro na tela inicial
+	Dado que eu acesso o site MarsAir
+	E o site se encontrar disponível
+	Quando a tela abrir
+	Então deve apresentar os campos "departing" e “returning”
+
+Cenário 2: Solicitar uma reserva de tickets disponíveis com sucesso
+    Dado que o cenário 1 seja verdadeiro
+    E o cliente filtrar o mês de viagem no campo “departing”
+    E filtrar, no campo “returning”, o mês maior que o campo “departing”
+    E houver tickets disponíveis
+    Quando o cliente clicar o botão search
+    Então o site deve mostrar a mensagem: “Assentos disponíveis! Ligue para 0800 MARSAIR para reservar!”
+
+Cenário 3: Solicitar uma reserva de tickets disponíveis sem sucesso
+    Dado que o cenário 1 seja verdadeiro
+    E o cliente filtrar o mês de viagem no campo “departing”
+    E filtrar, no campo “returning”, o mês maior que o campo “departing”
+    E não houver tickets disponíveis
+    Quando o cliente clicar o botão search
+    Então o site deve mostrar a mensagem: “Sorry, there are no more seats available.”
+
+História de usuário: Not valid Return Date
+
+
+Cenário 1: Retornar erro ao usar datas inválidas
+	Dado que o usuário tente reservar um ticket
+	E insira datas que não correspondem ao período de 1 ano a partir da “departing”
+	Quando o usuário clicar em Search
+	Então deve ser exibida a mensagem: “Unfortunately, this schedule is not possible. Please try again.”
+    
 ## Nota
 
 
