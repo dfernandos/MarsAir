@@ -50,6 +50,13 @@ public class BookTicketsTestCase {
             };
         }
 
+    @Test
+    public void validateFieldsAreDisplayed(){
+        HomePageObject homePageObject = new HomePageObject(driver);
+        homePageObject.getReturningElement().isDisplayed();
+        homePageObject.getDepartingElement().isDisplayed();
+
+    }
 
     @Test
     @UseDataProvider("customerDataInfo")
@@ -59,14 +66,6 @@ public class BookTicketsTestCase {
         bookATicketStep.searchForFlightToMars(bookTicket);
         bookATicketStep.validateMessages(positiveFeedbackMessage, negativeFeedbackMessage);
         bookATicketStep.clickAtBackButton();
-    }
-
-    @Test
-    public void validateFieldsAreDisplayed(){
-        HomePageObject homePageObject = new HomePageObject(driver);
-        homePageObject.getReturningElement().isDisplayed();
-        homePageObject.getDepartingElement().isDisplayed();
-
     }
 
 }
