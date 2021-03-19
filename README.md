@@ -8,7 +8,7 @@ Projeto criado para processo seletivo projeto da ThoughtWorks no papel de pessoa
 	1. Para auxiliar na visualização dos cenários de teste, foi criado o BDD para cada história de usuário, com os correspondentes cenários de teste.  
 	2. Foi realizado um teste exploratório para conhecer a aplicação e validar regras de negócio relatadas nas histórias de usuário. 
 	3. Este teste foi feito nos navegadores Chrome, Firefox e Microsoft Edge em desktop e mobile (Android). 
-	4. Criado issues no github para acompanhar o desenvolvimento dos testes e levantamento de métricas
+	4. Criado issues e board no github para acompanhar o desenvolvimento dos testes e levantamento de métricas
 	5. A partir dos cenários levantados e a contextualização da aplicação através do teste exploratório, foi realizado a automação dos principais cenários de teste. 
 
 ## Abaixo seguem os detalhes da automação desenvolvida:
