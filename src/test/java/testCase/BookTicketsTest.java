@@ -1,6 +1,6 @@
 package testCase;
 
-import PageObject.HomePageObject;
+import pageObject.HomePageObject;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 @RunWith(DataProviderRunner.class)
-public class BookTicketsTestCase {
+public class BookTicketsTest {
 
     static WebDriver driver;
 
