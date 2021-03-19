@@ -37,10 +37,10 @@ Desenvolver automação de teste para o processo de reserva de tickets para o pl
 
 Para gerar relatório de test, deve ser executado o comando descrito abaixo:
 ```bash
-`mvn surefire-report:report`
+`mvn clean test site`
 ```
 
-o relatório em HTML será gerado no caminho `target/site`.
+o relatório em HTML será gerado no caminho `target/site/index.html`.
     
 ## Cenários de Teste UI
 
