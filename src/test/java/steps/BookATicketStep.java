@@ -21,6 +21,9 @@ public class BookATicketStep {
     public void searchForFlightToMars(BookTicket bookTicket){
         homePageObject.getDepartingElement().sendKeys(bookTicket.getDepartingDate());
         homePageObject.getReturningElement().sendKeys(bookTicket.getReturningDate());
+        if(bookTicket.getPromotionalCode() != null){
+            homePageObject.getPromotionalCodeElement().sendKeys(bookTicket.getPromotionalCode());
+        }
         homePageObject.getButtonSearcElement().submit();
     }
 
@@ -38,15 +41,9 @@ public class BookATicketStep {
         Assert.assertTrue(fullMessage.equals(positiveReturnMessage) || fullMessage.equals(negativeReturnMessage));
     }
 
-    public void validateCallMessage(String message){
-        String callMessage = homePageObject.getMessageMoreInformation().getText();
-        System.out.println("A mensagem: --->>>" + callMessage);
-        Assert.assertEquals(callMessage, message);
-    }
-
-    public void validateNotValidDateMessage(String message){
-        String invalidDateMessage = homePageObject.getNotValidDateMessage().getText();
-        Assert.assertEquals(invalidDateMessage, message);
+    public void validatePromotionalCodeMessage(String message){
+        String promotionalCodeMessage = homePageObject.getPromotionalCodeMessage().getText();
+        Assert.assertEquals(promotionalCodeMessage, message);
     }
 
     public void clickAtBackButton(){
