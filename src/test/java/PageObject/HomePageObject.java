@@ -50,6 +50,10 @@ public class HomePageObject {
         return driver.findElement(By.xpath("//p[text()='Unfortunately, this schedule is not possible. Please try again.']"));
     }
 
+    public WebElement getPromotionalCodeMessage(){
+        return driver.findElement(By.className("promo_code"));
+    }
+
 
 
 
