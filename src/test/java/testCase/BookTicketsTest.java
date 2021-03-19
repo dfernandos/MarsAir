@@ -30,7 +30,6 @@ public class BookTicketsTest extends BaseTest {
         HomePageObject homePageObject = new HomePageObject(driver);
         homePageObject.getReturningElement().isDisplayed();
         homePageObject.getDepartingElement().isDisplayed();
-
     }
 
     @Test
