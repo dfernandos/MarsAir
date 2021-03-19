@@ -1,9 +1,8 @@
-package PageObject;
+package pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -52,6 +51,14 @@ public class HomePageObject {
 
     public WebElement getPromotionalCodeMessage(){
         return driver.findElement(By.className("promo_code"));
+    }
+
+    public WebElement getLogoLink(){
+        return driver.findElement(By.xpath("//a[@href='/DanielSilva']"));
+    }
+
+    public WebElement getBookATicketLink(){
+        return driver.findElement(By.xpath("//h3"));
     }
 
 
