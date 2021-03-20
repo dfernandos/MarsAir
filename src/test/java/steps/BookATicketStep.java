@@ -5,7 +5,7 @@ import domain.BookTicket;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utils.Log;
+import util.Log;
 
 import java.io.IOException;
 import java.util.List;
