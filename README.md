@@ -24,10 +24,10 @@ Desenvolver automação de teste para o processo de reserva de tickets para o pl
 
 ## Tecnologias
 
-* Java 8
+* Java 11
 * Maven
-* Junit 4.13
-* Selenium 3.141.59
+* Junit
+* Selenium
 * Google Chrome
 
 ## Executar todos os testes
