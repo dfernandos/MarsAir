@@ -11,7 +11,7 @@ import steps.BookATicketStep;
 import utils.BaseTest;
 
 @RunWith(DataProviderRunner.class)
-public class BookTicketsUsingPromotionlCodeTest extends BaseTest {
+public class BookTicketsUsingPromotionalCodeTest extends BaseTest {
 
     @DataProvider
     public static Object[][] customerDataInfo() {
