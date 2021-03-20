@@ -20,9 +20,12 @@ public class BookTicketsTest extends BaseTest {
                 {"December", "December (two years from now)", "Sorry, there are no more seats available."},
                 {"July", "December (two years from now)", "Sorry, there are no more seats available.", "Seats available!Call now on 0800 MARSAIR to book!" },
                 {"December", "December (next year)", "Sorry, there are no more seats available.", "Seats available!Call now on 0800 MARSAIR to book!"},
-                {"July (next year)", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
                 {"July", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
-            };
+                {"Selecting...", "Selecting...", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
+                {"July (next year)", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
+                {"December", "December", "Unfortunately, this schedule is not possible. Please try again.", "Unfortunately, this schedule is not possible. Please try again."},
+
+        };
         }
 
     @Test
