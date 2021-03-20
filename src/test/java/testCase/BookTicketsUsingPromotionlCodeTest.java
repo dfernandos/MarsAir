@@ -18,8 +18,11 @@ public class BookTicketsUsingPromotionlCodeTest extends BaseTest {
         return new Object[][]{
                 {"July","December (two years from now)","AF2-FJK-417","Promotional code AF2-FJK-417 used: 20% discount!"},
                 {"July","December (two years from now)","YG7-OLI-115","Sorry, code YG7-OLI-115 is not valid"},
-                {"July","December (two years from now)","CO6-MBI-118","Promotional code CO6-MBI-118 used: 60% discount!"}
-            };
+                {"July","December (two years from now)","CO6-MBI-118","Promotional code CO6-MBI-118 used: 60% discount!"},
+                {"Select...", "Selecting...", "CO6-MBI-118", "Unfortunately, this schedule is not possible. Please try again."},
+                {"Select...", "Selecting...", "", "Unfortunately, this schedule is not possible. Please try again."},
+
+        };
         }
 
     @Test
