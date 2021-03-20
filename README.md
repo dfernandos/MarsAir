@@ -1,9 +1,9 @@
 # MarsAir
 
-Projeto criado para processo seletivo projeto da ThoughtWorks no papel de pessoa Analista de Qualidade.
+Projeto criado para processo seletivo da ThoughtWorks no papel de pessoa Analista de Qualidade.
 
 ## Estratégia
-	Estratégia para criação dos testes:
+	Estratégias para criação dos testes:
 
 	1. Para auxiliar na visualização dos cenários de teste, foi criado o BDD para cada história de usuário, com os correspondentes cenários de teste.  
 	2. Foi realizado um teste exploratório para conhecer a aplicação e validar regras de negócio relatadas nas histórias de usuário. 
