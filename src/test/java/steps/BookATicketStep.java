@@ -26,47 +26,47 @@ public class BookATicketStep {
         }
     }
 
-    public void searchForFlightToMars(BookTicket bookTicket){
+    public void searchForFlightToMars(BookTicket bookTicket) {
         log.logger.info("Pesquisa voo disponível para Marte");
         homePageObject.getDepartingElement().sendKeys(bookTicket.getDepartingDate());
         homePageObject.getReturningElement().sendKeys(bookTicket.getReturningDate());
-        if(bookTicket.getPromotionalCode() != null){
+        if (bookTicket.getPromotionalCode() != null) {
             homePageObject.getPromotionalCodeElement().sendKeys(bookTicket.getPromotionalCode());
         }
         homePageObject.getButtonSearcElement().submit();
     }
 
-    public void validateMessages(String positiveReturnMessage, String negativeReturnMessage){
+    public void validateMessages(String positiveReturnMessage, String negativeReturnMessage) {
         log.logger.info("Valida feedback na pesquisa de voo");
         List<WebElement> elements = homePageObject.getMessages("p");
         String fullMessage = "";
-        for(WebElement webElement: elements){
+        for (WebElement webElement : elements) {
             String actualElement = webElement.getText();
 
-            if(!actualElement.equals("Back")){
+            if (!actualElement.equals("Back")) {
                 fullMessage = fullMessage + actualElement;
             }
         }
         Assert.assertTrue(fullMessage.equals(positiveReturnMessage) || fullMessage.equals(negativeReturnMessage));
     }
 
-    public void validatePromotionalCodeMessage(String message){
+    public void validatePromotionalCodeMessage(String message) {
         log.logger.info("Valida feedback do promotional code");
         String promotionalCodeMessage = homePageObject.getPromotionalCodeMessage().getText();
         Assert.assertEquals(promotionalCodeMessage, message);
     }
 
-    public void clickAtBackButton(){
+    public void clickAtBackButton() {
         log.logger.info("Clica no botão back");
         homePageObject.getBackLinkElement().click();
     }
 
-    public void clickAtLogoLink(){
+    public void clickAtLogoLink() {
         log.logger.info("Clica no link do logo");
         homePageObject.getLogoLink().click();
     }
 
-    public void clickAtBookATicketLink(){
+    public void clickAtBookATicketLink() {
         log.logger.info("Clica na mensagem: Book a ticket for Mars");
         homePageObject.getBookATicketLink().click();
     }
