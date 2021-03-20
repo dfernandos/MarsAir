@@ -3,7 +3,7 @@ package suites;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import testCase.BookTicketsTest;
-import testCase.BookTicketsUsingPromotionlCodeTest;
+import testCase.BookTicketsUsingPromotionalCodeTest;
 import testCase.ValidaLinksTest;
 
 @RunWith(Suite.class)
@@ -11,8 +11,8 @@ import testCase.ValidaLinksTest;
 @Suite.SuiteClasses({
 
         BookTicketsTest.class,
-        BookTicketsUsingPromotionlCodeTest.class,
-        ValidaLinksTest.class
+        BookTicketsUsingPromotionalCodeTest.class,
+        ValidaLinksTest.class,
 })
 public class AllTests {
 
